@@ -262,6 +262,7 @@ while 1
         disp(M_n);
         fprintf("The Matrix M^%d is:\n", n-1);
         disp(M_n_1);
+        fprintf("%d is the minimum power for which M stabilizes.\n", n);
         break;
     else
         M_n_1 = M_n;
@@ -274,7 +275,7 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 % Initialization of F
-F = zeros(4)
+F = zeros(4);
 
 for k = 0:n-1
     F = F + Q^k;
@@ -283,10 +284,43 @@ end
 disp("The Fundamental Matrix F is:");
 disp(F);
 
+disp("The Theoretical Fundamental Matrix F=(I - Q)^{-1} is:");
+F2 = inv(eye(4) - Q);
+disp(F2);
+
+for i = 1:4
+    for j = 1:4
+        Diff(i, j) = abs(F2(i, j) - F(i, j)) / F2(i, j) * 100;
+    end
+end
+
+disp("The Porcentual Difference between values of Theoretical F and calculated F Matrix is:");
+disp(Diff);
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Absorbtion Matrix %%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+disp("The Theoric Absorbtion Matrix A=RF is:");
 A_theo = R * F;
-disp("The Matrix A=RF is:");
 disp(A_theo);
 
-A_found = M_n(1,2:5)
-disp("The Matrix F = M^n(1,2:5) is:");
-disp(A_found);
+disp("The Absorbtion Matrix A = M^n(1,2:5) is:");
+A_Mn = M_n(1,2:5);
+disp(A_Mn);
+
+%%%%%%%%%%%%%%%%%
+%% Time Matrix %%
+%%%%%%%%%%%%%%%%%
+
+T = F * dt;
+disp("The Time matrix T = F*dt is:");
+disp(T);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Absorbtion Time Vector %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+t = F.'*[1; 1; 1; 1];
+disp("The time vector t = tanspose(T) * vector of ones is:");
+disp(t);
