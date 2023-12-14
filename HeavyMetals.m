@@ -323,7 +323,7 @@ disp(T);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 t = F.'*[1; 1; 1; 1];
-disp("The time vector t = tansposed of T * vector of ones is:");
+disp("The time vector t = transposed of T * vector of ones is:");
 disp(t);
 
 diary off;
