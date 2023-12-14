@@ -79,16 +79,16 @@ end
 
 % Plot of the evolution of the population in [D]eath [W]ater [S]eaweeds [K]rill and [F]ish
 
-plot(DT, D, 'color', "#AE431E", 'LineWidth',2);
+plot(DT, D, 'color', "#F80F00", 'LineWidth',1.5);
 title("Time evolution of the State's Population");
 xlabel('t');
 ylabel('State Population');
 
 hold on
-plot(DT, W, 'color', "#8FBDD3", 'LineWidth',2);
-plot(DT, S, 'color', "#A3A847", 'LineWidth',2);
-plot(DT, K, 'color', "#A7727D", 'LineWidth',2);
-plot(DT, F, 'color', "#506D84", 'LineWidth',2);
+plot(DT, W, 'color', "#00B6FF", 'LineWidth',1.5);
+plot(DT, S, 'color', "#00BB2D", 'LineWidth',1.5);
+plot(DT, K, 'color', "#FFB7C5", 'LineWidth',1.5);
+plot(DT, F, 'color', "#014BA0", 'LineWidth',1.5);
 hold off
 
 legend({'D', 'W', 'S', 'K', 'F'}, 'Location', 'east');
@@ -96,16 +96,16 @@ fig1 = gcf;
 exportgraphics(fig1, "01_population-evolution.png");
 
 % Population evolution plot in loglog
-loglog(DT, D, 'color', "#AE431E", 'LineWidth',2);
+loglog(DT, D, 'color', "#F80F00", 'LineWidth',1.5);
 title("Log-Log Time evolution of the State's Population");
 xlabel('t');
 ylabel('State Population');
 
 hold on
-loglog(DT, W, 'color', "#8FBDD3", 'LineWidth',2);
-loglog(DT, S, 'color', "#A3A847", 'LineWidth',2);
-loglog(DT, K, 'color', "#A7727D", 'LineWidth',2);
-loglog(DT, F, 'color', "#506D84", 'LineWidth',2);
+loglog(DT, W, 'color', "#00B6FF", 'LineWidth',1.5);
+loglog(DT, S, 'color', "#00BB2D", 'LineWidth',1.5);
+loglog(DT, K, 'color', "#FFB7C5", 'LineWidth',1.5);
+loglog(DT, F, 'color', "#014BA0", 'LineWidth',1.5);
 hold off
 
 legend({'D', 'W', 'S', 'K', 'F'}, 'Location', 'southeast');
@@ -128,14 +128,14 @@ for i = 1:length(S)
     RF(i) = M_F*F(i)/(M_S*S(i)+M_F*F(i)+M_K*K(i));
 end
 
-plot(DT, RS, 'color', "#A3A847", 'LineWidth',2);
+plot(DT, RS, 'color', "#00BB2D", 'LineWidth',1.5);
 title("Relative proportion of the Population in living beings");
 xlabel('t');
 ylabel('Relative Population in Living Beings');
 
 hold on
-plot(DT, RK, 'color', "#A7727D", 'LineWidth',2);
-plot(DT, RF, 'color', "#506D84", 'LineWidth',2);
+plot(DT, RK, 'color', "#FFB7C5", 'LineWidth',1.5);
+plot(DT, RF, 'color', "#014BA0", 'LineWidth',1.5);
 hold off
 
 legend({'RS', 'RK', 'RF'}, 'Location', 'northeast');
@@ -206,17 +206,17 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Plot of the evolution
-plot(DT2, D2, 'color', "#AE431E", 'LineWidth',2);
+plot(DT2, D2, 'color', "#F80F00", 'LineWidth',1.5);
 title("Time evolution of the State's Population considering leak");
 xlabel('t');
 ylabel('State Population');
 
 hold on
-plot(DT2, P2, 'color', "#65451F", 'LineWidth',2);
-plot(DT2, W2, 'color', "#8FBDD3", 'LineWidth',2);
-plot(DT2, S2, 'color', "#A3A847", 'LineWidth',2);
-plot(DT2, K2, 'color', "#A7727D", 'LineWidth',2);
-plot(DT2, F2, 'color', "#506D84", 'LineWidth',2);
+plot(DT2, P2, 'color', "#FDDB27", 'LineWidth',1.5);
+plot(DT2, W2, 'color', "#00B6FF", 'LineWidth',1.5);
+plot(DT2, S2, 'color', "#00BB2D", 'LineWidth',1.5);
+plot(DT2, K2, 'color', "#FFB7C5", 'LineWidth',1.5);
+plot(DT2, F2, 'color', "#014BA0", 'LineWidth',1.5);
 hold off
 
 legend({'D', 'P', 'W', 'S', 'K', 'F'}, 'Location', 'east');
@@ -224,17 +224,17 @@ fig4 = gcf;
 exportgraphics(fig4, "04_population-evolution-leak.png");
 
 % Plot of the evolution (log-log)
-loglog(DT2, D2, 'color', "#AE431E", 'LineWidth',2);
+loglog(DT2, D2, 'color', "#F80F00", 'LineWidth',1.5);
 title("Time evolution of the State's Population considering leak log-log");
 xlabel('t');
 ylabel('State Population');
 
 hold on
-loglog(DT2, P2, 'color', "#65451F", 'LineWidth',2);
-loglog(DT2, W2, 'color', "#8FBDD3", 'LineWidth',2);
-loglog(DT2, S2, 'color', "#A3A847", 'LineWidth',2);
-loglog(DT2, K2, 'color', "#A7727D", 'LineWidth',2);
-loglog(DT2, F2, 'color', "#506D84", 'LineWidth',2);
+loglog(DT2, P2, 'color', "#FDDB27", 'LineWidth',1.5);
+loglog(DT2, W2, 'color', "#00B6FF", 'LineWidth',1.5);
+loglog(DT2, S2, 'color', "#00BB2D", 'LineWidth',1.5);
+loglog(DT2, K2, 'color', "#FFB7C5", 'LineWidth',1.5);
+loglog(DT2, F2, 'color', "#014BA0", 'LineWidth',1.5);
 hold off
 
 legend({'D', 'P', 'W', 'S', 'K', 'F'}, 'Location', 'east');
