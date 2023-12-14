@@ -41,6 +41,9 @@ M = [1 0 i*dt j*dt k*dt;
     0 b*dt g*dt 1-((e + h + j)*dt) 0;
     0 c*dt 0 h*dt 1-((f + k)*dt)];
 
+disp("The Matrix M is:");
+disp(M);
+
 %%%%%%%%%%%%%%%%%%%%
 %% Time Evolution %%
 %%%%%%%%%%%%%%%%%%%%
@@ -244,3 +247,24 @@ exportgraphics(fig5, "05_population-evolution-leak-loglog.png");
 % Calculation of M^n
 Q = M(2:5, 2:5);
 R = M(1, 2:5);
+
+% Definition of the potential counter
+n = 2;
+
+% Definition of M^{n-1}
+M_n_1 = M;
+
+while 1
+    M_n = M_n_1 * M;
+    diff = M_n - M_n_1;
+    if all(diff(:) < 0.0000001) == 1
+        fprintf("The Matrix M^%d is:\n", n);
+        disp(M_n);
+        fprintf("The Matrix M^%d is:\n", n-1);
+        disp(M_n_1);
+        break;
+    else
+        M_n_1 = M_n;
+        n = n + 1;
+    end
+end
