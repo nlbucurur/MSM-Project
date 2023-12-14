@@ -1,4 +1,5 @@
 clear all;
+diary log.txt;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Definition of constants %%
@@ -262,7 +263,7 @@ while 1
         disp(M_n);
         fprintf("The Matrix M^%d is:\n", n-1);
         disp(M_n_1);
-        fprintf("%d is the minimum power for which M stabilizes.\n", n);
+        fprintf("%d is the minimum power for which M stabilizes.\n\n", n);
         break;
     else
         M_n_1 = M_n;
@@ -294,7 +295,7 @@ for i = 1:4
     end
 end
 
-disp("The Porcentual Difference between values of Theoretical F and calculated F Matrix is:");
+disp("The percentage difference matrix between the theoretical F values and the calculated F matrices (%) is:");
 disp(Diff);
 
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -322,5 +323,7 @@ disp(T);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 t = F.'*[1; 1; 1; 1];
-disp("The time vector t = tanspose(T) * vector of ones is:");
+disp("The time vector t = tansposed of T * vector of ones is:");
 disp(t);
+
+diary off;
