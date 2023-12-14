@@ -257,7 +257,7 @@ M_n_1 = M;
 while 1
     M_n = M_n_1 * M;
     diff = M_n - M_n_1;
-    if all(diff(:) < 0.0000001) == 1
+    if all(diff(:) < 0.00000001) == 1
         fprintf("The Matrix M^%d is:\n", n);
         disp(M_n);
         fprintf("The Matrix M^%d is:\n", n-1);
@@ -268,3 +268,25 @@ while 1
         n = n + 1;
     end
 end
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fundamental Matrix %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Initialization of F
+F = zeros(4)
+
+for k = 0:n-1
+    F = F + Q^k;
+end
+
+disp("The Fundamental Matrix F is:");
+disp(F);
+
+A_theo = R * F;
+disp("The Matrix A=RF is:");
+disp(A_theo);
+
+A_found = M_n(1,2:5)
+disp("The Matrix F = M^n(1,2:5) is:");
+disp(A_found);
