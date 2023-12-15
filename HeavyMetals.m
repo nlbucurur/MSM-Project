@@ -89,7 +89,7 @@ hold on
 plot(DT, W, 'color', "#00B6FF", 'LineWidth',1.5);
 plot(DT, S, 'color', "#00BB2D", 'LineWidth',1.5);
 plot(DT, K, 'color', "#FFB7C5", 'LineWidth',1.5);
-plot(DT, F, 'color', "#014BA0", 'LineWidth',1.5);
+plot(DT, F, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
 legend({'D', 'W', 'S', 'K', 'F'}, 'Location', 'east');
@@ -107,7 +107,7 @@ hold on
 loglog(DT, W, 'color', "#00B6FF", 'LineWidth',1.5);
 loglog(DT, S, 'color', "#00BB2D", 'LineWidth',1.5);
 loglog(DT, K, 'color', "#FFB7C5", 'LineWidth',1.5);
-loglog(DT, F, 'color', "#014BA0", 'LineWidth',1.5);
+loglog(DT, F, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
 legend({'D', 'W', 'S', 'K', 'F'}, 'Location', 'southeast');
@@ -138,7 +138,7 @@ grid on;
 
 hold on
 plot(DT, RK, 'color', "#FFB7C5", 'LineWidth',1.5);
-plot(DT, RF, 'color', "#014BA0", 'LineWidth',1.5);
+plot(DT, RF, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
 legend({'RS', 'RK', 'RF'}, 'Location', 'northeast');
@@ -221,7 +221,7 @@ plot(DT2, P2, 'color', "#FDDB27", 'LineWidth',1.5);
 plot(DT2, W2, 'color', "#00B6FF", 'LineWidth',1.5);
 plot(DT2, S2, 'color', "#00BB2D", 'LineWidth',1.5);
 plot(DT2, K2, 'color', "#FFB7C5", 'LineWidth',1.5);
-plot(DT2, F2, 'color', "#014BA0", 'LineWidth',1.5);
+plot(DT2, F2, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
 legend({'D', 'P', 'W', 'S', 'K', 'F'}, 'Location', 'east');
@@ -240,7 +240,7 @@ loglog(DT2, P2, 'color', "#FDDB27", 'LineWidth',1.5);
 loglog(DT2, W2, 'color', "#00B6FF", 'LineWidth',1.5);
 loglog(DT2, S2, 'color', "#00BB2D", 'LineWidth',1.5);
 loglog(DT2, K2, 'color', "#FFB7C5", 'LineWidth',1.5);
-loglog(DT2, F2, 'color', "#014BA0", 'LineWidth',1.5);
+loglog(DT2, F2, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
 legend({'D', 'P', 'W', 'S', 'K', 'F'}, 'Location', 'east');
