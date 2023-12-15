@@ -83,6 +83,7 @@ plot(DT, D, 'color', "#F80F00", 'LineWidth',1.5);
 title("Time evolution of the State's Population");
 xlabel('t');
 ylabel('State Population');
+grid on;
 
 hold on
 plot(DT, W, 'color', "#00B6FF", 'LineWidth',1.5);
@@ -100,6 +101,7 @@ loglog(DT, D, 'color', "#F80F00", 'LineWidth',1.5);
 title("Log-Log Time evolution of the State's Population");
 xlabel('t');
 ylabel('State Population');
+grid on;
 
 hold on
 loglog(DT, W, 'color', "#00B6FF", 'LineWidth',1.5);
@@ -132,6 +134,7 @@ plot(DT, RS, 'color', "#00BB2D", 'LineWidth',1.5);
 title("Relative proportion of the Population in living beings");
 xlabel('t');
 ylabel('Relative Population in Living Beings');
+grid on;
 
 hold on
 plot(DT, RK, 'color', "#FFB7C5", 'LineWidth',1.5);
@@ -210,6 +213,8 @@ plot(DT2, D2, 'color', "#F80F00", 'LineWidth',1.5);
 title("Time evolution of the State's Population considering leak");
 xlabel('t');
 ylabel('State Population');
+grid on;
+
 
 hold on
 plot(DT2, P2, 'color', "#FDDB27", 'LineWidth',1.5);
@@ -228,6 +233,7 @@ loglog(DT2, D2, 'color', "#F80F00", 'LineWidth',1.5);
 title("Time evolution of the State's Population considering leak log-log");
 xlabel('t');
 ylabel('State Population');
+grid on;
 
 hold on
 loglog(DT2, P2, 'color', "#FDDB27", 'LineWidth',1.5);
