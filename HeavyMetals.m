@@ -86,9 +86,9 @@ ylabel('State Population');
 grid on;
 
 hold on
-plot(DT, W, 'color', "#00B6FF", 'LineWidth',1.5);
-plot(DT, S, 'color', "#00BB2D", 'LineWidth',1.5);
-plot(DT, K, 'color', "#FFB7C5", 'LineWidth',1.5);
+plot(DT, W, 'color', "#00B7EB", 'LineWidth',1.5);
+plot(DT, S, 'color', "#008080", 'LineWidth',1.5);
+plot(DT, K, 'color', "#FFB6C1", 'LineWidth',1.5);
 plot(DT, F, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
@@ -104,9 +104,9 @@ ylabel('State Population');
 grid on;
 
 hold on
-loglog(DT, W, 'color', "#00B6FF", 'LineWidth',1.5);
-loglog(DT, S, 'color', "#00BB2D", 'LineWidth',1.5);
-loglog(DT, K, 'color', "#FFB7C5", 'LineWidth',1.5);
+loglog(DT, W, 'color', "#00B7EB", 'LineWidth',1.5);
+loglog(DT, S, 'color', "#008080", 'LineWidth',1.5);
+loglog(DT, K, 'color', "#FFB6C1", 'LineWidth',1.5);
 loglog(DT, F, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
@@ -130,14 +130,14 @@ for i = 1:length(S)
     RF(i) = M_F*F(i)/(M_S*S(i)+M_F*F(i)+M_K*K(i));
 end
 
-plot(DT, RS, 'color', "#00BB2D", 'LineWidth',1.5);
+plot(DT, RS, 'color', "#008080", 'LineWidth',1.5);
 title("Relative proportion of the Population in living beings");
 xlabel('t');
 ylabel('Relative Population in Living Beings');
 grid on;
 
 hold on
-plot(DT, RK, 'color', "#FFB7C5", 'LineWidth',1.5);
+plot(DT, RK, 'color', "#FFB6C1", 'LineWidth',1.5);
 plot(DT, RF, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
@@ -217,10 +217,10 @@ grid on;
 
 
 hold on
-plot(DT2, P2, 'color', "#FDDB27", 'LineWidth',1.5);
-plot(DT2, W2, 'color', "#00B6FF", 'LineWidth',1.5);
-plot(DT2, S2, 'color', "#00BB2D", 'LineWidth',1.5);
-plot(DT2, K2, 'color', "#FFB7C5", 'LineWidth',1.5);
+plot(DT2, P2, 'color', "#CD7F32", 'LineWidth',1.5);
+plot(DT2, W2, 'color', "#00B7EB", 'LineWidth',1.5);
+plot(DT2, S2, 'color', "#008080", 'LineWidth',1.5);
+plot(DT2, K2, 'color', "#FFB6C1", 'LineWidth',1.5);
 plot(DT2, F2, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
@@ -236,10 +236,10 @@ ylabel('State Population');
 grid on;
 
 hold on
-loglog(DT2, P2, 'color', "#FDDB27", 'LineWidth',1.5);
-loglog(DT2, W2, 'color', "#00B6FF", 'LineWidth',1.5);
-loglog(DT2, S2, 'color', "#00BB2D", 'LineWidth',1.5);
-loglog(DT2, K2, 'color', "#FFB7C5", 'LineWidth',1.5);
+loglog(DT2, P2, 'color', "#CD7F32", 'LineWidth',1.5);
+loglog(DT2, W2, 'color', "#00B7EB", 'LineWidth',1.5);
+loglog(DT2, S2, 'color', "#008080", 'LineWidth',1.5);
+loglog(DT2, K2, 'color', "#FFB6C1", 'LineWidth',1.5);
 loglog(DT2, F2, 'color', "#0000FF", 'LineWidth',1.5);
 hold off
 
