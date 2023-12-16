@@ -80,8 +80,8 @@ end
 % Plot of the evolution of the population in [D]eath [W]ater [S]eaweeds [K]rill and [F]ish
 
 plot(DT, D, 'color', "#F80F00", 'LineWidth',1.5);
-title("Time evolution of the State's Population");
-xlabel('t');
+title("Time Evolution of the State's Population");
+xlabel('t [day]');
 ylabel('State Population');
 grid on;
 
@@ -98,8 +98,8 @@ exportgraphics(fig1, "01_population-evolution.png");
 
 % Population evolution plot in loglog
 loglog(DT, D, 'color', "#F80F00", 'LineWidth',1.5);
-title("Log-Log Time evolution of the State's Population");
-xlabel('t');
+title("Log-Log Time Evolution of the State's Population");
+xlabel('t [day]');
 ylabel('State Population');
 grid on;
 
@@ -131,8 +131,8 @@ for i = 1:length(S)
 end
 
 plot(DT, RS, 'color', "#008080", 'LineWidth',1.5);
-title("Relative proportion of the Population in living beings");
-xlabel('t');
+title("Relative Proportion of the Population in Living Beings");
+xlabel('t [day]');
 ylabel('Relative Population in Living Beings');
 grid on;
 
@@ -210,8 +210,8 @@ end
 
 % Plot of the evolution
 plot(DT2, D2, 'color', "#F80F00", 'LineWidth',1.5);
-title("Time evolution of the State's Population considering leak");
-xlabel('t');
+title("Time Evolution of the State's Population Considering Leak");
+xlabel('t [day]');
 ylabel('State Population');
 grid on;
 
@@ -230,8 +230,8 @@ exportgraphics(fig4, "04_population-evolution-leak.png");
 
 % Plot of the evolution (log-log)
 loglog(DT2, D2, 'color', "#F80F00", 'LineWidth',1.5);
-title("Time evolution of the State's Population considering leak log-log");
-xlabel('t');
+title("Log-Log Time Evolution of the State's Population Considering Leak");
+xlabel('t [day]');
 ylabel('State Population');
 grid on;
 
