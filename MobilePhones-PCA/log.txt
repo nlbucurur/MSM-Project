@@ -1,0 +1,17 @@
+Construction of V matrix is OK
+ 
+The percentage of information held by each Pi axis is:
+    5.1980
+    8.0203
+   11.3017
+   15.1965
+   18.2642
+   42.0193
+
+By choosing the following Pi axes:
+     6     5     4
+
+The percentage of conserved information is:
+   75.4800
+
+The size of P is OK
