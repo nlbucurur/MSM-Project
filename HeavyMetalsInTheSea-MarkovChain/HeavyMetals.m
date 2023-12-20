@@ -81,7 +81,7 @@ end
 
 plot(DT, D, 'color', "#F80F00", 'LineWidth',1.5);
 title("Time Evolution of the State's Population");
-xlabel('t [day]');
+xlabel('t [days]');
 ylabel('State Population');
 grid on;
 
@@ -99,7 +99,7 @@ exportgraphics(fig1, "01_population-evolution.png");
 % Population evolution plot in loglog
 loglog(DT, D, 'color', "#F80F00", 'LineWidth',1.5);
 title("Log-Log Time Evolution of the State's Population");
-xlabel('t [day]');
+xlabel('t [days]');
 ylabel('State Population');
 grid on;
 
@@ -132,7 +132,7 @@ end
 
 plot(DT, RS, 'color', "#008080", 'LineWidth',1.5);
 title("Relative Proportion of the Population in Living Beings");
-xlabel('t [day]');
+xlabel('t [days]');
 ylabel('Relative Population in Living Beings');
 grid on;
 
@@ -211,7 +211,7 @@ end
 % Plot of the evolution
 plot(DT2, D2, 'color', "#F80F00", 'LineWidth',1.5);
 title("Time Evolution of the State's Population Considering Leak");
-xlabel('t [day]');
+xlabel('t [days]');
 ylabel('State Population');
 grid on;
 
@@ -231,7 +231,7 @@ exportgraphics(fig4, "04_population-evolution-leak.png");
 % Plot of the evolution (log-log)
 loglog(DT2, D2, 'color', "#F80F00", 'LineWidth',1.5);
 title("Log-Log Time Evolution of the State's Population Considering Leak");
-xlabel('t [day]');
+xlabel('t [days]');
 ylabel('State Population');
 grid on;
 
@@ -328,8 +328,12 @@ disp(T);
 %% Absorbtion Time Vector %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-t = F.'*[1; 1; 1; 1];
-disp("The time vector t = transposed of T * vector of ones is:");
-disp(t);
+t1 = F.'*[1; 1; 1; 1];
+disp("The time step vector t = transposed of F * vector of ones is:");
+disp(t1);
+
+t2 = T.'*[1; 1; 1; 1];
+disp("The time vector t [days] = transposed of T * vector of ones is:");
+disp(t2);
 
 diary off;
